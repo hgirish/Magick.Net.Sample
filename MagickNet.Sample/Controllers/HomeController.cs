@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -35,14 +35,15 @@ namespace MagickNet.Sample.Controllers
             {
                 // image.Draw(drawables);
                 var drawable = new Drawables()
-                    .FontPointSize(72)
-                    .Font(@"D:\Downloads\Pacifico-Regular.ttf")
-                    .StrokeColor(MagickColors.Orange)
+                    .FontPointSize(36)
+                    .Font(@"H:\publicH\Downloads\Pacifico\Pacifico-Regular.ttf")
+                    .StrokeColor(MagickColors.Chocolate)
                     .TextAlignment(TextAlignment.Center)
-                    .Text(256, 64, "Magick.NET")
-                    .StrokeColor(new MagickColor(0, Quantum.Max, 0))
-                    .FillColor(MagickColors.SaddleBrown)
-                    .Ellipse(256, 96, 192, 8, 0, 360)
+                    .Text(200, 200, "Silver mist suffused ")
+                    .Text(200, 400, "the deck of the ship")
+                    //.StrokeColor(new MagickColor(0, Quantum.Max, 0))
+                    //.FillColor(MagickColors.SaddleBrown)
+                    //.Ellipse(256, 96, 192, 8, 0, 360)
                     .Draw(image);
                 image.Write(newFilePath);
                 ExifProfile profile = image.GetExifProfile();
