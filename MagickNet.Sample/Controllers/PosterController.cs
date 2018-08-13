@@ -37,6 +37,7 @@ namespace MagickNet.Sample.Controllers {
         {
             string originalImage = Path.Combine(webrootPath, "images", "large_Event_Poster_Pasta.png");
             string newFilePath = Path.Combine(webrootPath, "images", "poster_with_data.png");
+            string pdffile = Path.Combine(webrootPath, "images", "poster_with_data.pdf");
             string font = Path.Combine(webrootPath, "fonts", "TGSharpSans-Medium.ttf");
             string extraBoldFont = Path.Combine(webrootPath, "fonts", "TGSharpSans-Semibold.ttf");
             string thinFont = Path.Combine(webrootPath, "fonts", "TGSharpSans-Thin.ttf");
@@ -111,6 +112,7 @@ namespace MagickNet.Sample.Controllers {
                 //    .Draw(image);
                 image.Write(newFilePath);
                 model.ImageSrc = "/images/poster_with_data.png";
+                image.Write(pdffile);
                 //ExifProfile profile = image.GetExifProfile();
                 //if (profile == null) {
                 //    ViewData["Message"] = "Image does not contain exif information";
